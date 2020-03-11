@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Prototype</title>
+  </head>
+
+  <body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <script>
+      function Hero(name) {
+        this.name = name;
+      }
+
+      Hero.prototype.sayHi = function() {
+        console.log(`Hola, i'm ${this.name}`);
+      };
+
+      const zelda = new Hero("Zelda");
+
+      // PROPIEDADES DE LA INSTANCIA
+      console.log("Name:", zelda.name);
+
+      // PROPIEDADES DE LA CLASE
+      console.log(`SayHi`, zelda.sayHi);
+
+      // hasOwnProperty (de donde sale toString)
+      console.log(`toString`, zelda.toString);
+    </script>
+  </body>
+</html>
