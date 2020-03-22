@@ -178,6 +178,23 @@ function fullName(firstName, lastName) {
 
 var hector = fullName('Hector', 'Flores');
 console.log(hector);
+var rect = {
+  width: 4,
+  height: 6
+};
+
+function calcArea(r) {
+  return r.height * r.width;
+}
+
+var areaRect = calcArea(rect);
+console.log(areaRect);
+
+rect.toString = function () {
+  return "Rectangle with width: " + this.width + " and height: " + this.height;
+};
+
+console.log(rect.toString());
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

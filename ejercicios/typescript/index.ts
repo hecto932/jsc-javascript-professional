@@ -63,3 +63,28 @@ function fullName(firstName: string, lastName?: string): string {
 
 const hector = fullName('Hector', 'Flores');
 console.log(hector);
+
+// Interfaces
+
+interface Rectangle {
+  width: number;
+  height: number;
+}
+
+let rect: Rectangle = {
+  width: 4,
+  height: 6
+};
+
+function calcArea(r: Rectangle): number {
+  return r.height * r.width;
+}
+
+const areaRect = calcArea(rect);
+console.log(areaRect);
+
+rect.toString = function() {
+  return `Rectangle with width: ${this.width} and height: ${this.height}`;
+};
+
+console.log(rect.toString());
