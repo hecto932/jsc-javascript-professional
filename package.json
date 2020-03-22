@@ -8,9 +8,22 @@
     "platzi"
   ],
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "babel-preset-env": "^1.7.0",
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.8.3"
+  },
+  "browserlist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.6.4",
+    "regenerator-runtime": "^0.13.5"
   }
 }
